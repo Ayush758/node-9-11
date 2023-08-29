@@ -17,3 +17,4 @@ CMD ["node", "app.js"]
 # with a production build of your app anCd within the same stage fire RUN npm remove whichh will remove all the
 # node modules bcoz they are not required for the production code. So you can afforf to remove them.
 # And finally in the last stage you can pass CMD . But remember you never use CMD in the PROD environment.
+# And yes this concept is generic for Java and also Python.
