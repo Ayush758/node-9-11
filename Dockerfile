@@ -11,3 +11,9 @@ COPY --from=base /app/node_modules /app/node_modules
 COPY app.js .
 USER harshit
 CMD ["node", "app.js"]
+
+# --->>> Prod practice -> In 1st stage fire npm install , this will install all the dependencies defined in your 
+# package.json and package-lock.json files . In the 2nd satge fire npm run build, it creates a build directory 
+# with a production build of your app anCd within the same stage fire RUN npm remove whichh will remove all the
+# node modules bcoz they are not required for the production code. So you can afforf to remove them.
+# And finally in the last stage you can pass CMD . But remember you never use CMD in the PROD environment.
