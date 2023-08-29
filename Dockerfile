@@ -18,3 +18,5 @@ CMD ["node", "app.js"]
 # node modules bcoz they are not required for the production code. So you can afforf to remove them.
 # And finally in the last stage you can pass CMD . But remember you never use CMD in the PROD environment.
 # And yes this concept is generic for Java and also Python.
+
+# You can use this nodejs project --> git clone https://github.com/salma71/frontend.git
