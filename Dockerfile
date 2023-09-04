@@ -21,3 +21,31 @@ CMD ["node", "app.js"]
 # And yes this concept is generic for Java and also Python.
 
 # You can use this nodejs project --> git clone https://github.com/salma71/frontend.git
+
+# prod ready dockerfile for nodejs
+
+#FROM node:14 AS dependencies
+
+#WORKDIR /app
+
+#COPY package*.json /app/
+#RUN npm install --production
+
+#FROM dependencies AS build
+
+#WORKDIR /app
+
+#COPY . /app
+#RUN npm install && npm run build && rm -rf node_modules
+
+#FROM node:14-slim AS production
+
+#RUN addgroup harshit && adduser -D harshit -G harshit
+
+
+#WORKDIR /app
+
+#COPY --from=build /app/package*.json /app/build/ .
+#USER harshit
+
+#CMD ["npm", "start"]
