@@ -5,11 +5,11 @@ RUN npm install
 #COPY . ./
 
 FROM node:14.17.0-alpine
-RUN addgroup harshit && adduser -D harshit -G harshit
+RUN addgroup aayush && adduser -D aayush -G aayush
 WORKDIR /app
 COPY --from=base /app/node_modules /app/node_modules
 COPY app.js .
-USER harshit
+USER aayush
 CMD ["node", "app.js"]
 
 # --->>> Prod practice -> In 1st stage fire npm install , this will install all the dependencies defined in your 
